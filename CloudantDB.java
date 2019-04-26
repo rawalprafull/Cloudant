@@ -56,12 +56,15 @@ public class CloudantDB {
 			System.out.println(cloudantdb);
 			return cloudantdb.toString();
 		
-	}catch (Exception e) {
+		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		return null;
-		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("This is main method");
 	}
 	
 }
