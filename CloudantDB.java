@@ -37,7 +37,7 @@ public class CloudantDB {
 
 
 
-	public static void main(String[] args) {
+	public String GetDataByID(String id) {
 		
 		
 		String cloudantUserName = "97db821e-87a4-4507-b8ee-fcc95b72b447-bluemix";
@@ -52,12 +52,15 @@ public class CloudantDB {
 			CloudantClient client = ClientBuilder.url(new URL(url)).build();
 			System.out.println("connected");
 			db = client.database("deathclaim", true);
-			CloudantDB cloudantdb =  db.find(CloudantDB.class, args[0]);
+			CloudantDB cloudantdb =  db.find(CloudantDB.class, id);
 			System.out.println(cloudantdb);
+			return cloudantdb.toString();
 		
 	}catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return null;
 		
 	}
 	
