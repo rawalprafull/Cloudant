@@ -1,1 +1,1 @@
-# Simple fetch operation for cloudant no-sql data base
+# Simple fetch operation for cloudant no-sql database
